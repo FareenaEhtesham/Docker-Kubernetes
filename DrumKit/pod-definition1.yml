@@ -1,0 +1,19 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: drumkit-deployment
+spec:
+  selector:
+    matchLabels:
+      app: drumkit
+  replicas: 2 
+  template:
+    metadata:
+      labels:
+        app: drumkit
+    spec:
+      containers:
+      - name: drumkit-cont1
+        image: dom 
+        ports:
+        - containerPort: 80

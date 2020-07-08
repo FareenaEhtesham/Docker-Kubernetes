@@ -1,0 +1,13 @@
+for run an image
+sudo docker build -t dom:1 .
+
+
+for run a container at port 8081
+sudo docker run -d --name Drumkit1 -p 8081:80 dom:1
+
+
+Volume mount:
+sudo docker run -d --name Drumkit3 -p 8080:80 -v /home/fareena/Documents/ExtraWork/DOM/DrumKit:/usr/share/nginx/html nginx:alpine
+
+
+
