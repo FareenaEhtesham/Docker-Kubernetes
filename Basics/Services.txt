@@ -1,0 +1,16 @@
+
+
+SERVICES IN KUBERNETES:
+
+kubectl create -f myfirst_replica.yml  (for the creation of pod here i made 3 replicas)
+
+kubectl create -f myfirst_service.yml
+
+minikube ip
+
+kubectl get svc (or) kubectl get SERVICES
+
+[minikube ip : service] // type in your browser 
+
+// service helps us to give single static IP so incase if pod will moved to another node we can access 
+it
