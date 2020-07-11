@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-first-pv
+spec:
+  capacity:
+    storage: 5M
+  # volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
+  # storageClassName: slow
+  hostPath: 
+    path: /tmp/first-PV
