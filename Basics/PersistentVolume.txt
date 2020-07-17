@@ -1,0 +1,26 @@
+//COMMANDS:
+
+kubectl create -f pv.yml
+
+kubectl create -f pvc.yml
+
+kubectl create -f pod-pv.yml
+
+for run all persistentVolume ,Claim and POds
+
+to check run:
+
+kubectl get pv, pvc ,pod
+
+
+
+
+
+//DESCRIPTION:
+go to the container by "kubectl exec my-pod-pv-pvc -it sh" and save data [my-pod-pv-pvc is the name of pod where i used pv and pvc].
+
+As i use persistentvolumeclaimpolicy = Delete so i delete my pvc automatically my pv delete but data/files which i saved in container
+present in cluster 
+
+minikube ssh (go to the cluster level) then go to the host path (define in yaml file of persistent volume) and it shows
+the data you save at container level although pv and pvc delete
