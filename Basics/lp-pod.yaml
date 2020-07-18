@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    test: liveness
+  name: liveness-true
+spec:
+  containers:
+  - name: cont-liveness-1
+    image: nginx
+    livenessProbe:
+      exec:
+        command:
+        - cat
+        - /tmp/healthy
